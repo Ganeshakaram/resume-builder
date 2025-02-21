@@ -1,33 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const togglePasswordButton = document.getElementById('togglePassword');
-    const passwordField = document.getElementById('password');
-    const loginForm = document.getElementById('loginForm');
+document.getElementById('parse-resume').addEventListener('click', function() {
+    const fileInput = document.getElementById('resume-upload');
+    
+    if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
 
-    togglePasswordButton.addEventListener('click', function() {
-        if (passwordField.type === 'password') {
-            passwordField.type = 'text';
+        if (allowedTypes.includes(file.type)) {
+            handleFileUpload(file);
         } else {
-            passwordField.type = 'password';
+            alert('Invalid file type. Please upload a PDF, DOC, DOCX, or TXT file.');
         }
-    });
-
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        // Dummy login validation (replace with real authentication)
-        if (username === 'testuser' && password === 'password') {
-            // Store login status
-            localStorage.setItem('isLoggedIn', 'true');
-
-            // Redirect to the return URL or default to resume builder
-            const urlParams = new URLSearchParams(window.location.search);
-            const returnUrl = urlParams.get('returnUrl') || '../resume-builder.html';
-            window.location.href = returnUrl;
-        } else {
-            alert('Invalid credentials');
-        }
-    });
+    } else {
+        alert('Please select a resume file to upload.');
+    }
 });
