@@ -1,0 +1,42 @@
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3);
+    width: 350px;
+    margin: 100px auto;
+}
+
+.form-control {
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: #888;
+}

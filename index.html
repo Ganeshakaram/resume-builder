@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand text-success" href="index.html">AI Resume Builder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pages/login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pages/signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pages/resume.html">Assistance</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center text-white mt-5">
+        <h1>Welcome to AI Resume Builder</h1>
+        <p>Choose a template to get started</p>
+    </header>
+
+    <section class="templates container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <a href="#" onclick="checkLogin(1)">
+                    <div class="card template-card">
+                        <img src="images/professional.img" alt="Template 1" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Professional Resume</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" onclick="checkLogin(2)">
+                    <div class="card template-card">
+                        <img src="images/expert2.img" alt="Template 2" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Creative Resume</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" onclick="checkLogin(3)">
+                    <div class="card template-card">
+                        <img src="images/modern.img" alt="Template 3" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Modern Resume</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function checkLogin(templateId) {
+            // Check if the user is logged in (example using localStorage)
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+            if (isLoggedIn) {
+                // Redirect to resume builder with the selected template
+                window.location.href = `resume-builder.html?template=${templateId}`;
+            } else {
+                // Redirect to login page with a return URL
+                window.location.href = `pages/login.html?returnUrl=resume-builder.html?template=${templateId}`;
+            }
+        }
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* Header Section */
+header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Templates Section */
+.templates {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Template Cards */
+.template-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s;
+    width: 250px;
+}
+
+.template-card:hover {
+    transform: scale(1.05);
+}
+
+.template-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.template-card h3 {
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .templates {
+        flex-direction: column;
+        align-items: center;
+    }
+}

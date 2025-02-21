@@ -1,0 +1,37 @@
+body {
+    background-color: #121212;
+    color: white;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+    width: 350px;
+}
+
+.form-control {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #bbb;
+}
+
+.btn-custom {
+    background-color: #00cc00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #009900;
+}
+h2 {
+    color: white; /* Ensures text is visible */
+    font-weight: bold; /* Green glow effect */
+}

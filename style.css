@@ -1,0 +1,44 @@
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    padding: 15px;
+}
+
+header h1 {
+    color: #28a745;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.templates {
+    margin-top: 50px;
+}
+
+.template-card {
+    background-color: #1e1e1e;
+    border: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.template-card img {
+    border-radius: 5px;
+}
+
+.template-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+}
+
+.template-card .card-body {
+    padding: 15px;
+}
+
+a {
+    color: #28a745;
+}

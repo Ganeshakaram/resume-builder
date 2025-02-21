@@ -1,0 +1,14 @@
+body {
+    background-color: #f8f9fa;
+}
+
+#bullet-points-output {
+    margin-top: 10px;
+}
+
+#resume-preview {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #fff;
+}
