@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder - Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/resume.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand text-success" href="index.html">AI Resume Builder</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Resume Builder</h1>
+        <form id="resume-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone">
+            </div>
+            <div class="mb-3">
+                <label for="experience-input" class="form-label">Experience (e.g., job title)</label>
+                <input type="text" class="form-control" id="experience-input">
+                <button type="button" class="btn btn-secondary mt-2" onclick="generateBulletPoints()">Generate Bullet Points</button>
+                <div id="bullet-points-output"></div>
+            </div>
+            <div class="mb-3">
+                <label for="education" class="form-label">Education</label>
+                <textarea class="form-control" id="education" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Generate Resume</button>
+        </form>
+
+        <h2 class="mt-5">Resume Preview</h2>
+        <div id="resume-preview"></div>
+
+        <h2 class='mt-5'>Resume Score: 
+            <span id='resume-score'>0</span>/100
+        </h2>
+
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src='script/resume.js'></script> 
+</body>
+</html>
+
